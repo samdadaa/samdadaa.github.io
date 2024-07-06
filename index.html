@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Samer Dadah</title>
+    <link rel="icon" type="image/x-icon" href="icons/icon_profile.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #2c2c2c;
+            color: #f0f0f0;
+        }
+        
+        h2, h6,a{ color: black;}
+
+        h3, h4, h5, p, div,span {
+            color: #f0f0f0 !important;
+        }
+
+        .navbar, .bg-body-secondary {
+            background-color: #3a3a3a;
+        }
+
+        .btn-primary {
+            background-color: #ffcc99;
+            border-color: #ffcc99;
+            color: #2c2c2c;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffb380;
+            border-color: #ffb380;
+        }
+
+        .bg-primary {
+            background-color: #ffcc99 !important;
+            color: #2c2c2c;
+        }
+
+        .border-bottom {
+            border-color: #ffcc99 !important;
+        }
+
+        .alert-info {
+            background-color: #3a3a3a;
+            border-color: #ffcc99;
+        }
+
+        .alert-info p {
+            color: #ffcc99;
+        }
+
+        .row {
+        display: flex;
+        flex-wrap: wrap;
+            }   
+
+    </style>
+</head>
+
+<body>
+
+    <!--HEADER with NAV-->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg px-5 border-bottom" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#uberMich">ÜBER MICH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hardSkills">HARD-SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#softSkills">SOFT-SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projekte">PROJEKTE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#kontakt">KONTAKT</a>
+                        </li>
+                    </ul>
+                </div>
+                <img class="img-fluid rounded-circle me-3" src="images/bewerbungsfoto1.png" alt="Your Portfolio Logo" width="50" height="50">
+            <a class="navbar-brand ms-2" href="#"><h5>Samer Dadah</h5></a>
+            </div>
+        </nav>
+    </header>
+
+    <!--Scrollspy-->
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+        class="scrollspy-example p-3 rounded-2" tabindex="0">
+
+        <!--HOME-->
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2">
+            <div class="row mt-3 align-items-center p-4 rounded-2">
+                <div class="col-lg-6">
+                    <h1 class="display-2 fw-bold">Samer Dadah</h1>
+                    <h2 class="display-6">Zukünftuger Softwareentwickler</h2>
+                </div>
+                <div class="col-lg-6 d-none d-sm-inline mt-5">
+                    <div>
+                        <i class="devicon-c-plain-wordmark me-3" style="font-size: 3rem"></i>
+                        <i class="devicon-python-plain-wordmark me-3" style="font-size: 3rem"></i>
+                        <i class="devicon-java-plain-wordmark me-3" style="font-size: 3rem"></i>
+                        <i class="devicon-mysql-plain-wordmark me-3" style="font-size: 3rem"></i>
+                        <i class="devicon-html5-plain-wordmark me-3" style="font-size: 3rem"></i>
+                        <i class="devicon-css3-plain-wordmark me-3" style="font-size: 3rem"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 align-items-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid img-thumbnail" src="images/bewerbungsfoto1.png" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-3 alert alert-info">
+                        <p><strong><i class="bi bi-exclamation-circle-fill pe-3"></i>Aktuell bin ich auf der Suche
+                                nach einem Praktikumsplatz im Zeitraum vom 30.09.2024 bis einschließlich zum 21.05.2025 in innovativem Unternehmen zur Vertiefung der Kenntnisse und Beiträgen zu spannenden </Projekten></strong><br>
+                                <strong>Mein Hauptziel während des Praktikums ist es, meine erworbenen Kenntnisse in der Praxis anzuwenden,
+                                     meine Fähigkeiten zu vertiefen und meine Projektarbeit für die (IHK)Abschlussprüfung zu schreiben. Ich bin überzeugt, 
+                                    dass dieses Praktikum mir einen einzigartigen Einblick bieten wird.</strong>
+                                    <br>
+                            <br><a href="#kontakt">
+                                <button class="btn btn-primary my-3" type="button" href="#kontakt">
+                                    <i class="bi bi-envelope-fill me-3"></i>Kontaktieren Sie mich jetzt
+                                </button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--ÜBER MICH-->
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2" id="uberMich">
+            <div class="bg-primary bg-gradient p-4 rounded-2">
+                <h2 class="display-6 fw-bold">ÜBER MICH</h2>
+            </div>
+            <div class="row mt-3 align-items-center">
+                <div class="col-lg-8">
+                    <div class="">
+                        <p>
+                            Mit großem Interesse und hoher Motivation befinde ich mich aktuell in einer Umschulung zum Fachinformatiker Anwendungsentwicklung. 
+                            Der Schritt in die IT-Branche war für mich eine bewusste Entscheidung, 
+                            da mich die rasante Entwicklung in diesem Bereich und die Möglichkeit, 
+                            innovative Lösungen zu schaffen, faszinieren.
+                            Durch meine laufende Umschulung habe ich ein breites an theoretischem Wissen und praktischen Fähigkeiten in der Anwendungsentwicklung erlangt. 
+                            Ich bin vertraut mit Programmiersprachen wie Java,
+                             C und HTML/CSS. Zudem verfüge ich über Kenntnisse in Datenbanken MySQL.
+                             In meiner bisherigen beruflichen Laufbahn habe ich als Koch gearbeitet und dabei meine Fähigkeiten in der Problemlösung,
+                              im Zeitmanagement und in der Teamarbeit geschärft. 
+                             Durch die Teilnahme an der Stadtmeisterschaft Köln 2020 konnte ich zudem meine Zielstrebigkeit und Leidenschaft unter Beweis stellen.
+                              Meine Portfolio-Webseite gibt Ihnen einen Einblick in meine bisherigen Projekte und Fähigkeiten.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <img class="img-fluid img-thumbnail" id="profile-pic" src="images/bewerbungsfoto2.PNG" alt="">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--HARD-SKILLS-->
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2" id="hardSkills">
+            <div class="col">
+                <div class="bg-primary bg-gradient p-4 rounded-2">
+                    <h2 class="display-6 fw-bold">HARD-SKILLS</h2>
+                </div>
+                <div class="row">
+                    <h3 class="mt-5 display-6 fw-bold ps-4">Ausbildung</h3>
+                    <hr>
+                    <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Laufende Umschulung</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Fachinformatiker für Anwendungsentwicklung (IHK)</h5>
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseFIAE">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapse2" class="collapse">
+                                    <div class="card card-body mt-3">
+                                        <div>
+                                        <span class="d-inline-flex alert alert-info p-2">IT-Hardware und
+                                            Betriebssysteme</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Netzwerke und
+                                            Internettechnologien</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Virtualisierung</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Green-IT</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Service und Support</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Informationssicherheit und
+                                            Datenschutz</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Responsives
+                                            Webdesign</span>
+                                        <span class="d-inline-flex alert alert-info p-2">HTML und CSS</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Prozedurale
+                                            Programmierung</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Software-Engineering mit
+                                            UML</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Datenbanken und SQL</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Programmiersprache:
+                                            Python</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Programmiersprache:
+                                            C</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Objektorientierte
+                                            Programmierung</span>
+                                        <span class="d-inline-flex alert alert-info p-2">Programmiersprache:
+                                            Java</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Datenverarbeitung in
+                                            Java</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Interaktive
+                                            Webanwendungen mit Datenbankanbindung</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Programmiersprache:
+                                            C#</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Programmiersprache:
+                                            PHP</span>
+                                        </div>
+                                            <div class="mt-4 card-text alert alert-info">
+                                                <p>
+                                                    Im Rahmen meiner laufenden Umschulung zum Fachinformatiker habe ich ein umfassendes Wissen und praktische Fähigkeiten in verschiedenen Bereichen der IT erworben. Die Schwerpunkte meiner Ausbildung liegen auf:
+            
+                                                   <br><br>Ich verfüge über ein tiefgreifendes Verständnis der Funktionsweise von Computern und bin mit gängigen Betriebssystemen wie Windows, 
+                                                   Linux und MacOS vertraut.
+                                                    Die Grundlagen der Rechnernetze und die relevanten Kommunikationsprotokolle sind mir ebenfalls geläufig.
+                                                    <br><br>Im Bereich der Webentwicklung besitze ich Kenntnisse in HTML und CSS, die es mir ermöglichen, 
+                                                    ansprechende und funktionale Websites zu erstellen. Darüber hinaus habe ich gelernt, mit Datenbanken zu arbeiten, 
+                                                    Daten zu modellieren und effiziente Abfragen zu erstellen.
+                                                    <br><br>Die Prinzipien der Softwareentwicklung, einschließlich UML-Modellierung, prozeduraler und objektorientierter Programmierung, wurden mir vermittelt.
+                                                     Diese Kenntnisse bilden die Grundlage für die strukturierte und effiziente Entwicklung von Softwarelösungen.
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Abgeschlossene Ausbildung</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Koch(IHK)</h5>
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseFIAE">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapse3" class="collapse">
+                                    <div class="card card-body mt-3">
+                                        
+                                            <div>
+                                                <span class="d-inline-flex alert alert-info p-2">Teamarbeit und Kommunikation</span>
+                                                <span class="d-inline-flex alert alert-info p-2">Kalkulation und Lagerhaltung</span>
+                                                <span class="d-inline-flex alert alert-info p-2">Präsentation und Dekoration von Speisen</span>
+                                                <span class="d-inline-flex alert alert-info p-2">Professionelle Zubereitungstechniken</span>
+                                                <span class="d-inline-flex alert alert-info p-2">Kreative Rezeptideen</span>
+                                                <span class="d-inline-flex alert alert-info p-2">Hygienestandards und Lebensmittelsicherheit</span>
+                                            </div>    
+                                            <div class="mt-4 card-text alert alert-info">
+                                            <p>
+                                                Meine abgeschlossene Koch-Ausbildung hat mir wichtige Fähigkeiten und Eigenschaften vermittelt,
+                                                 die von großem Nutzen für meine jetzige Tätigkeit als Fachinformatiker sind: <br><br>
+
+                                                Strukturiertes Arbeiten und Organisation: In der dynamischen Küchenumgebung war es unerlässlich, 
+                                                Arbeitsabläufe zu planen, Aufgaben zu priorisieren und organisiert vorzugehen. <br><br>
+                                            
+                                                Genauigkeit und Präzision: Beim Kochen erfordert jedes Detail höchste Präzision,
+                                                 um perfekte Ergebnisse zu erzielen. Diese Genauigkeit und Sorgfalt bringe ich auch in meine Arbeit als Fachinformatiker ein,
+                                                  um Fehler zu vermeiden und saubere Lösungen zu entwickeln. <br><br>
+                                                Teamfähigkeit und Kommunikation:
+                                                Diese Fähigkeiten habe ich im Team mit Köchen, Servicepersonal und Auszubildenden erfolgreich unter Beweis gestellt. <br><br>
+                                                
+                                                Lernbereitschaft und Anpassungsfähigkeit:
+                                                Diese Lernbereitschaft und Anpassungsfähigkeit zeichnen mich auch als Fachinformatiker aus, 
+                                                da die IT-Branche sich rasant weiterentwickelt.
+                                            </p>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Studium</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Elektrotechnik</h5>
+                                
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFIAE" aria-expanded="false" aria-controls="collapseFIAE">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapseFIAE" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>Mit hoher Motivation begann ich ein Studium der Elektrotechnik mit Schwerpunkt erneuerbare Energien. Dieses Thema faszinierte mich aufgrund seiner Relevanz für eine nachhaltige Zukunft und der technischen Herausforderungen, die es mit sich bringt.
+                                            <br><br>
+                                            Leider musste ich mein Studium nach einem Semester aufgrund des Bürgerkriegs in Syrien abbrechen. Die politischen und humanitären Umstände machten es unmöglich, mein Studium fortzusetzen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Weiterbildungskarten hier -->
+
+                        <hr>
+                        <div class="row flex-wrap">
+                            <h3 class="mt-5 display-6 fw-bold ps-4">Weiterbildung</h3>
+                            <hr>
+                          
+                            <div class="col-lg-6 mb-3">
+                              <div class="card alert alert-info">
+                                <div class="card-header">LinkedinLearning</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Online-Kurse</h5>
+                                  <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseFIAE">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                  </button>
+                                  <div id="collapse1" class="collapse">
+                                    <div class="card card-body mt-3">
+                          
+                                      <div class="d-flex flex-wrap">
+                                        <span class="p-2 flex-fill alert alert-info">Java Objektorientierte Programmierung Fehlerbehandlung StreamAPI</span>
+                                        <span class="p-2 flex-fill alert alert-info">LinuxBefehlszeile Grundkurs</span>
+                                        <span class="p-2 flex-fill alert alert-info">Software-Engineering mit UML</span>
+                                        <span class="p-2 flex-fill alert alert-info">ITSecurity Tipps und Tricks</span>
+                                        <span class="p-2 flex-fill alert alert-info">Git und Github lernen</span>
+                                        <span class="p-2 flex-fill alert alert-info">Kunstliche Intelligenz  Grundwissen fur Manager und Fuhrungskrafte</span>
+                                        <span class="p-2 flex-fill alert alert-info">LinuxBefehlszeile Grundkurs</span>
+                                        <span class="p-2 flex-fill alert alert-info">Netzwerkgrundlagen Die Theorie fur die Praxis</span>
+                                        <span class="p-2 flex-fill alert alert-info">Einfuhrung in ITHelpdesks</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Generische Programmierung, Datenströme, Datumsrechnung
+                                          KURS</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Einführung in die IT-Architektur</span>
+                                        <span class="d-inline-flex alert alert-secondary p-2">Algorithmen</span>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="col-lg-6 mb-3">
+                              <div class="card alert alert-info">
+                                <div class="card-header">Stadtmeisterschaft</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">2er Platz bei der Koch-Stadtmeisterschaft Köln 2020</h5>
+                                  <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseer" aria-expanded="false" aria-controls="collapseFIAE">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                  </button>
+                                  <div id="collapseer" class="collapse">
+                                    <div class="card card-body mt-3">
+                                      <div class="d-flex flex-wrap">
+                                        
+                                            <div class="mt-4 card-text alert alert-info">
+                                                <p> Durch die Teilnahme an dem Event „Nacht der Jungen Sterne“ hatte ich die
+                                                    Chance, als Küchenchef mit 22 Köchen und Köchinnen für 120 Gäste ein 4.Gänge Menü zu kreieren.
+                                                    Zusätzlich sammelte ich wichtige Erfahrungen durch die Teilnahme an der Stadtmeisterschaft Köln
+                                                    2020, bei welcher ich ein hochwertiges 4.Gänge Menü für 12 Gäste zubereitete. Durch meine hohe
+                                                    Zielstrebigkeit und Leidenschaft erzielte ich somit den 2.Platz.</p>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+
+                         <!-- Weitere Ausbildungskarten hier -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+           
+    
+        <hr>
+
+        <!--SOFT-SKILLS-->
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2" id="softSkills">
+            <div class="col">
+                <div class="bg-primary bg-gradient p-4 rounded-2">
+                    <h2 class="display-6 fw-bold">SOFT-SKILLS</h2>
+                </div>
+                    <div class="row mt-5" style="display: flex; flex-wrap: wrap;">  <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Strategisches Vorgehen</div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-zoom-in" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Problemlösungsorientiert</h5>
+                                    </li>
+                                    <li class="list-group-item mt-3"><i class="bi bi-stack" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Zeitmanagementfähigkeiten</h5>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsePLAN1" aria-expanded="false" aria-controls="collapsePLAN">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapsePLAN1" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>In meiner bisherigen beruflichen Laufbahn habe ich gelernt, 
+                                            Probleme effektiv zu erkennen und zu lösen. <br><br> Durch die Arbeit in einer dynamischen Arbeitsumgebung bin ich es gewohnt,
+                                             mehrere Aufgaben gleichzeitig zu managen und Fristen einzuhalten.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Gemeinsam stark</div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-zoom-in" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Teamfähig</h5>
+                                    </li>
+                                    <li class="list-group-item mt-3"><i class="bi bi-stack" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Anpassungsfähig</h5>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsePLAN2" aria-expanded="false" aria-controls="collapsePLAN">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapsePLAN2" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>Die Zusammenarbeit mit Kollegen hat meine Teamfähigkeit geschärft und mir gezeigt, wie wichtig es ist, 
+                                            effektiv zu kommunizieren und gemeinsame Ziele zu verfolgen. <br><br> Meine Entscheidung,
+                                             eine Umschulung zum Fachinformatiker zu absolvieren, zeigt meine Bereitschaft,
+                                              mich neuen Herausforderungen zu stellen und mich in neuen Bereichen weiterzuentwickeln.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Ambition und Begeisterung</div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-zoom-in" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Zielorientiert</h5>
+                                    </li>
+                                    <li class="list-group-item mt-3"><i class="bi bi-stack" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Motiviert und leidenschaftlich</h5>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsePLAN3" aria-expanded="false" aria-controls="collapsePLAN">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapsePLAN3" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>Durch meinen Ehrgeiz und meine Zielstrebigkeit habe ich es geschafft,
+                                             den 2. Platz bei der Kölner Stadtmeisterschaft zu belegen. <br><br> 
+                                             Meine Begeisterung für die IT und mein Wissensdurst treiben mich an, 
+                                             Neues zu lernen und meine Fähigkeiten ständig zu verbessern.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header">Brückenbauer und Problemlöser</div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="bi bi-zoom-in" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">Effektive Kommunikation</h5>
+                                    </li>
+                                    <li class="list-group-item mt-3"><i class="bi bi-stack" style="font-size: 2.5rem"></i>
+                                        <h5 class="card-title mt-3">stressresistent</h5>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsePLAN4" aria-expanded="false" aria-controls="collapsePLAN">
+                                    <i class="bi bi-info-circle-fill me-3"></i>mehr
+                                </button>
+                                <div id="collapsePLAN4" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>
+                                            Aktives Zuhören: Ich bin eine aufmerksamer Zuhörer, die die Perspektiven anderer aufrichtig schätzt. Ich beteilige mich aktiv an Gesprächen, stelle klärende Fragen und zeige Empathie, um sinnvolle Interaktionen zu fördern.
+                                            <br><br>
+                                            Nonverbale Kommunikation: Ich achte auf nonverbale Hinweise wie Körpersprache, Mimik und Tonfall, um meine Kommunikation zu verbessern und einen positiven Rapport aufzubauen.
+                                            <br><br>
+                                            Zwischenmenschliche Fähigkeiten: Ich baue starke Verbindungen zu Menschen mit unterschiedlichem Hintergrund auf und fördere Vertrauen, Zusammenarbeit und Teamgeist.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--weitere softskills-Karten hier -->
+                  
+                </div>
+                  
+            </div>
+        </section>
+
+        <hr>
+
+        <!--PROJEKTE-->
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2" id="projekte">
+            <div class="col">
+                <div class="bg-primary bg-gradient p-4 rounded-2">
+                    <h2 class="display-6 fw-bold">PROJEKTE</h2>
+                </div>
+                <div class="row flex-wrap mt-5">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header"><h3>KonverterX</h3></div>
+                            <div class="card-body">
+                                <div class="ratio ratio-16x9">
+                                    <img src="images/konverterX.png" alt="">
+                                    
+                                </div>
+                                <h5 class="mt-3 alert alert-info">Textumwandlungstool für Desktop-Mitarbeiter</h5>
+                                
+                                <a href="https://github.com/samdadaa/KonverterX.git" class="btn btn-primary col-12 mb-2 col-md-4" role="button">
+                                    <i class="bi bi-github me-3"></i>GitHub
+                                </a>
+                                <button class="btn btn-primary col-12 mb-2 col-md-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProject1" aria-expanded="false"
+                                    aria-controls="collapseProject1">
+                                    <i class="bi bi-info-circle-fill me-3"></i>Info
+                                </button>
+                                <div id="collapseProject1" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>Dieses Programm kann verschiedene Textformate ineinander umwandeln, z. B. von Groß- in Kleinbuchstaben, 
+                                            von Leerzeichen in Unterstriche oder in bekannter Schreibweise CamelCase sowie SnakeCase.
+                                             Es ist ein kleines, aber praktisches Werkzeug für die Textverarbeitung.
+                                            <br><br>
+                                            Dieses kleine Texterkennungsprogramm hat mir wertvolle Erfahrungen in der Programmierung vermittelt
+                                             und meine Fähigkeiten in verschiedenen Bereichen wie Textverarbeitung, 
+                                            Variablen und DatenTypen, Dateioperationen und Skripting verbessert. 
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-6 col-md-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header"><h3>Tic-Tac-Toe</h3></div>
+                            <div class="card-body">
+                                <div class="ratio ratio-16x9">
+                                    <img src="images/tictactoe.png" alt="">
+                                  
+                                </div>
+                                <h5 class="mt-3 alert alert-info">Das Spiel für Jung und Alt</h5>
+                                
+                                <a href="https://github.com/samdadaa/TicTacToe-Spiel.git" class="btn btn-primary col-12 mb-2 col-md-4" role="button">
+                                    <i class="bi bi-github me-3"></i>GitHub
+                                </a>
+                                <button class="btn btn-primary col-12 mb-2 col-md-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProject2" aria-expanded="false"
+                                    aria-controls="collapseProject2">
+                                    <i class="bi bi-info-circle-fill me-3"></i>Info
+                                </button>
+                                <div id="collapseProject2" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>Tic-Tac-Toe ist eines der ältesten Spiele der Welt. 
+                                            Es wird seit Jahrhunderten in vielen verschiedenen Kulturen gespielt.
+                                        <br><br>
+                                        Durch die Umsetzung dieses Projekts habe ich meine Fähigkeiten in Problemlösung und logischem Denken deutlich erweitert. 
+                                        Dazu gehört die Analyse von Spielregeln und Anforderungen, 
+                                        die Entwicklung von Algorithmen und Strategien sowie die praktische Anwendung theoretischer Konzepte der objektorientierten Programmierung.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header"><h3>Taschenrechner-GUI</h3></div>
+                            <div class="card-body">
+                                <div class="ratio ratio-16x9">
+                                    <img src="images/taschenrechner.png" alt="">
+                                    
+                                </div>
+                                <h5 class="mt-3 alert alert-info">Taschenrechner in MacOs Style</h5>
+                                
+                                <a href="https://github.com/samdadaa/Taschenrechner-GUI.git" class="btn btn-primary col-12 mb-2 col-md-4" role="button">
+                                    <i class="bi bi-github me-3"></i>GitHub
+                                </a>
+                                <button class="btn btn-primary col-12 mb-2 col-md-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProject30" aria-expanded="false"
+                                    aria-controls="collapseProject30">
+                                    <i class="bi bi-info-circle-fill me-3"></i>Info
+                                </button>
+                                <div id="collapseProject30" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>Dieses Projekt ist ein funktionaler Taschenrechner, der im Stil der macOS-Rechner-App gestaltet und in Java programmiert wurde.
+                                             Der Taschenrechner bietet grundlegende Rechenoperationen wie Addition, Subtraktion, Multiplikation und Division. 
+                                             Die Benutzeroberfläche ist intuitiv und benutzerfreundlich, 
+                                            mit einem Design, das an die macOS-Ästhetik angelehnt ist.
+                                        <br><br>
+                                        Dieses Projekt hat meine Fähigkeiten in der objektorientierten Programmierung (OOP) mit Java vertieft.
+                                         Ich habe Klassen für verschiedene Komponenten wie Tasten,
+                                         das Anzeigefeld und die Rechenlogik erstellt.
+                                         GUI-Design: Ich habe meine Fähigkeiten im GUI-Design mit Swing verbessert, indem ich ein Layout erstellt habe, 
+                                         das dem macOS-Taschenrechner ähnelt, und die visuellen Elemente gestaltet habe.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="mt-3 alert alert-info" style="width: 100%">
+                            <div class="card-header"><h3>Zahl-Raten</h3></div>
+                            <div class="card-body">
+                                <div class="ratio ratio-16x9">
+                                    <img src="images/zahlrate.png" alt="">
+                                  
+                                </div>
+                                <h5 class="mt-3 alert alert-info">Einfaches Zahl-Raten Spiel</h5>
+                                
+                                <a href="https://github.com/samdadaa/Zahl-Raten-Spiel.git" class="btn btn-primary col-12 mb-2 col-md-4" role="button">
+                                    <i class="bi bi-github me-3"></i>GitHub
+                                </a>
+                                <button class="btn btn-primary col-12 mb-2 col-md-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProject40" aria-expanded="false"
+                                    aria-controls="collapseProject40">
+                                    <i class="bi bi-info-circle-fill me-3"></i>Info
+                                </button>
+                                <div id="collapseProject40" class="collapse">
+                                    <div class="mt-4 card-text alert alert-info">
+                                        <p>
+                                            Dieses Projekt ist ein einfaches "Zahl raten"-Spiel,
+                                             das mit Java und der Swing-Bibliothek für die grafische Benutzeroberfläche (GUI) entwickelt wurde. Das Spiel präsentiert dem Benutzer eine zufällige Zahl zwischen einem bestimmten Bereich und fordert ihn auf,
+                                             diese zu erraten. Der Spieler hat mehrere Versuche, die Zahl zu erraten,
+                                             und erhält Hinweise, ob seine Eingabe zu hoch, zu niedrig oder richtig war.
+                                             <br><br>
+                                             Dieses Projekt hat meine grundlegenden Java-Kenntnisse in Bereichen wie Datentypen, Variablen, Schleifen, Verzweigungen, Methoden und Klassen gefestigt.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+
+                    <!-- Weitere Projektkarten hier -->
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--KONTAKT-->
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2" id="kontakt">
+            <div class="col">
+                <div class="bg-primary bg-gradient p-4 rounded-2">
+                    <h2 class="display-6 fw-bold">KONTAKT</h2>
+                </div>
+                <div class="my-5 alert alert-info">
+                    <p>Sie sind auf der Suche nach einem Anwendungsentwickler und wollen mich näher kennenlernen?<br>
+                        <br>Schreiben Sie mich jetzt an! Ich freue mich auf Ihre Nachricht.
+                    </p>
+                </div>
+                <form action="mailto:samdadada8@gmail.com" method="get">
+                    <div class="mb-3 mt-5">
+                        <label for="subject" class="form-label fw-bold">Betreff</label>
+                        <input type="text" name="subject" class="form-control" id="subject" required placeholder="...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="body" class="form-label fw-bold">Nachricht</label>
+                        <textarea class="form-control" name="body" id="body" rows="5" required
+                            placeholder="..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4"><i class="bi bi-send me-3"></i>E-Mail</button>
+                </form>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--FOOTER-->
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                <div class="col">
+                    <div class="row border-bottom pb-3">
+                        <div class="col-6 d-flex justify-content-start">
+                            <p class="text-body-secondary">© 2024<br>Samer Dadah</p>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <a href="#" class="link-body-emphasis text-decoration-none me-3">
+                                <i class="bi bi-github" style="font-size: 2rem"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-2 mb-md-0 me-md-auto">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

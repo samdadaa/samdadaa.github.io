@@ -58,11 +58,30 @@
         flex-wrap: wrap;
             }   
 
+            #typed-text {
+  color: transparent; /* Textfarbe zunächst transparent */
+  text-shadow: 0 0 0 2px white; /* Animierter Textschatten */
+  animation: typing 5s steps(500) forwards; /* Animationseinstellungen */
+  color: rgb(249, 195, 145);
+}
+
+@keyframes typing {
+  from {
+    text-shadow: 0 0 0 0 white; /* Text am Anfang transparent */
+  }
+  to {
+    text-shadow: 0 0 5px 2px white; /* Text am Ende undurchsichtig */
+  }
+}
+
+            
     </style>
+
+  
 </head>
 
 <body>
-
+  
     <!--HEADER with NAV-->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg px-5 border-bottom" id="navbar">
@@ -104,11 +123,13 @@
         class="scrollspy-example p-3 rounded-2" tabindex="0">
 
         <!--HOME-->
-        <section class="container mt-2 bg-body-secondary p-4 rounded-2">
+        <section class="container mt-2 bg-body-secondary p-4 rounded-2" style="background-image: url('images/it.png'); background-size: cover; background-position: center; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
             <div class="row mt-3 align-items-center p-4 rounded-2">
                 <div class="col-lg-6">
                     <h1 class="display-2 fw-bold">Samer Dadah</h1>
-                    <h2 class="display-6">Zukünftiger Softwareentwickler</h2>
+            
+                    <h2 class="display-6" id="typed-text" >Zukünftiger Softwareentwickler</h2>
+
                 </div>
                 <div class="col-lg-6 d-none d-sm-inline mt-5">
                     <div>
@@ -122,9 +143,7 @@
                 </div>
             </div>
             <div class="row mt-3 align-items-center">
-                <div class="col-lg-6">
-                    <img class="img-fluid img-thumbnail" src="images/bewerbungsfoto1.png" alt="">
-                </div>
+               
                 <div class="col-lg-6">
                     <div class="mt-3 alert alert-info">
                         <p><strong><i class="bi bi-exclamation-circle-fill pe-3"></i>Aktuell bin ich auf der Suche
@@ -170,7 +189,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mt-3">
-                    <img class="img-fluid img-thumbnail" id="profile-pic" src="images/bewerbungsfoto2.PNG" alt="">
+                    <img class="img-fluid img-thumbnail" id="profile-pic" src="images/fotot.jpeg" alt="">
                 </div>
             </div>
         </section>

@@ -1,4 +1,5 @@
 import { dayraPreview, dayraShowcase } from './dayra.js'
+import { projectPreview, projectShowcase } from './project-motion.js'
 import { brandTools, experience, profile, projects, skillGroups, type Project, type ProjectCategory } from './content.js'
 
 const appRoot = document.querySelector<HTMLDivElement>('#app') as HTMLDivElement
@@ -97,7 +98,7 @@ function sectionHead(eyebrow: string, title: string, text: string): string {
 function projectCard(project: Project): string {
   return `<article class="project-card reveal" data-project-category="${project.category}">
     <div class="project-card-top"><span class="category-pill">${project.category}</span><span class="project-index">0${projects.indexOf(project) + 1}</span></div>
-    ${project.slug === 'floday-dayra' ? dayraPreview() : ''}
+    ${project.slug === 'floday-dayra' ? dayraPreview() : projectPreview(project)}
     <div><p class="project-kicker">${escapeHtml(project.kicker)}</p><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p></div>
     <div class="tag-row">${project.technologies.slice(0, 5).map((t) => `<span>${escapeHtml(t)}</span>`).join('')}</div>
     <a class="text-link" href="/projects/${project.slug}" data-link>Case ansehen ${icon('arrow', 17)}</a>
@@ -184,7 +185,7 @@ function projectDetailPage(project: Project): string {
       <p class="case-lead">${escapeHtml(project.summary)}</p>
       <div class="tag-row tag-row-large">${project.technologies.map((t) => `<span>${escapeHtml(t)}</span>`).join('')}</div>
     </section>
-    ${project.slug === 'floday-dayra' ? dayraShowcase() : ''}
+    ${project.slug === 'floday-dayra' ? dayraShowcase() : projectShowcase(project)}
     <section class="section container-wide case-layout">
       <div class="case-main">
         <article class="case-block reveal"><span class="case-number">01</span><div><h2>Ausgangslage</h2><p>${escapeHtml(project.challenge)}</p></div></article>

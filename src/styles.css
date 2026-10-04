@@ -843,3 +843,74 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   .dayra-live-stage * { animation: none !important; }
 }
+
+/* Project-specific SVG process illustrations, paired with Dayra's presentation. */
+.project-motion-preview, .project-motion-panel {
+  color: #f5f8fc;
+  color-scheme: dark;
+  border: 1px solid color-mix(in srgb, var(--motion-accent) 24%, transparent);
+  background: radial-gradient(ellipse at 25% 50%, color-mix(in srgb, var(--motion-accent) 12%, transparent), transparent 65%), #03192b;
+  overflow: hidden;
+}
+.project-motion-preview { display: flex; align-items: center; gap: 14px; height: 142px; padding: 12px 18px; border-radius: 18px; }
+.project-motion-preview .project-motion-scene { flex: 0 0 150px; width: 150px; }
+.project-motion-preview strong { display: block; font-size: clamp(16px, 1.7vw, 22px); line-height: 1.2; letter-spacing: -.03em; }
+.project-motion-preview small { display: block; color: #abc0cb; font-size: 11px; margin-top: 6px; }
+.project-motion-panel { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 32px; padding: 46px; border-radius: 28px; }
+.project-motion-copy .eyebrow { color: var(--motion-accent); }
+.project-motion-copy h2 { margin: 14px 0 20px; font-size: clamp(32px, 4vw, 48px); line-height: 1.12; letter-spacing: -.04em; }
+.project-motion-copy p { color: #abc0cb; margin: 0; }
+.project-motion-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.project-motion-topics span { padding: 7px 10px; border-radius: 9px; border: 1px solid color-mix(in srgb, var(--motion-accent) 25%, transparent); font-size: 11px; color: #d5e4ed; }
+.project-motion-visual { min-width: 0; margin: 0; }
+.project-motion-visual figcaption { text-align: center; color: #abc0cb; font-size: 11px; margin-top: 14px; }
+.project-motion-scene { display: block; width: 100%; height: auto; overflow: visible; }
+.motion-card { fill: #0b2a40; stroke: var(--motion-accent); stroke-opacity: .4; stroke-width: 1.5; }
+.motion-label { fill: #dcecf4; font: 600 12px ui-sans-serif, system-ui, sans-serif; letter-spacing: 1px; }
+.motion-line, .motion-outline { stroke: var(--motion-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.motion-halo { fill: var(--motion-accent); opacity: .06; }
+.motion-dot, .motion-drop, .motion-bar, .motion-scan, .motion-water { fill: var(--motion-accent); }
+.motion-dot { animation: projectDot 3s ease-in-out infinite; }
+.motion-stream { stroke-dasharray: 6 10; animation: projectStream 2.5s linear infinite; }
+.motion-stream-reverse { animation-direction: reverse; }
+.motion-track-1 { animation-delay: -.8s; }
+.motion-track-2 { animation-delay: -1.6s; }
+.motion-float { animation: projectFloat 5s ease-in-out infinite; }
+.motion-float-alt { animation: projectFloat 5s ease-in-out infinite reverse; }
+.motion-pulse { animation: projectPulse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.motion-water { opacity: .35; animation: projectWater 4s ease-in-out infinite; }
+.motion-drop { animation: projectDrop 4s ease-in-out infinite; }
+.motion-meter { transform-origin: 108px 118px; animation: projectMeter 5s ease-in-out infinite; }
+.motion-step { animation: projectStep 6s ease-in-out infinite; }
+.motion-step-two { animation-delay: -4s; }
+.motion-step-three { animation-delay: -2s; }
+.motion-clock-hand { transform-origin: 125px 135px; animation: projectClock 18s linear infinite; }
+.motion-bar { transform-box: fill-box; transform-origin: bottom; animation: projectBar 4s ease-in-out infinite; opacity: .8; }
+.motion-test { animation: projectTest 4s ease-in-out infinite; }
+.motion-scan { opacity: .22; animation: projectScan 4s ease-in-out infinite; }
+@keyframes projectDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
+@keyframes projectStream { to { stroke-dashoffset: -48; } }
+@keyframes projectFloat { 50% { transform: translateY(-7px); } }
+@keyframes projectPulse { 50% { transform: scale(1.04); opacity: .7; } }
+@keyframes projectWater { 50% { transform: translateY(-8px); opacity: .55; } }
+@keyframes projectDrop { 0%, 100% { transform: translateY(-5px); opacity: .3; } 50% { transform: translateY(8px); opacity: .9; } }
+@keyframes projectMeter { 50% { transform: rotate(35deg); } }
+@keyframes projectStep { 0%, 65%, 100% { transform: translateY(0); opacity: .65; } 20%, 40% { transform: translateY(-8px); opacity: 1; } }
+@keyframes projectClock { to { transform: rotate(360deg); } }
+@keyframes projectBar { 0%, 100% { transform: scaleY(.7); } 50% { transform: scaleY(1); } }
+@keyframes projectTest { 0%, 100% { opacity: .3; } 30%, 75% { opacity: 1; } }
+@keyframes projectScan { 50% { transform: translateY(120px); } }
+@media (max-width: 1050px) {
+  .project-motion-panel { grid-template-columns: 1fr; }
+  .project-motion-visual { width: min(100%, 560px); justify-self: center; }
+}
+@media (max-width: 760px) {
+  .project-motion-panel { padding: 28px 24px; gap: 24px; }
+  .project-motion-preview { padding-inline: 10px; gap: 10px; }
+  .project-motion-preview .project-motion-scene { flex-basis: 126px; width: 126px; }
+  .project-motion-preview strong { font-size: 17px; }
+  .project-motion-preview small { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-motion-scene * { animation: none !important; }
+}

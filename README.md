@@ -64,3 +64,5 @@ Die Marken-Icons werden zur Laufzeit von `cdn.simpleicons.org` geladen. Falls ei
 ## FloDay / Dayra
 
 Die Projektkarten und `/projects/floday-dayra` verwenden eine CSS-Animation, adaptiert aus `DayraLiveStage.tsx` und den zugehörigen Styles der FloDay-Website. Das Markup liegt in `src/dayra.ts`, die Styles in `src/styles.css`. Die Darstellung benötigt keine zusätzlichen Pakete oder Medien und respektiert `prefers-reduced-motion`.
+
+Alle weiteren Projekte besitzen eigene animierte SVG-Prozessillustrationen in `src/project-motion.ts`: Wasserwirtschaft, CRM/ERP-Synchronisation, Belegabläufe, Zeiterfassung, Datenmapping, Commerce und API-Validierung. Sie erscheinen in den Projektkarten (auch auf der Homepage für ausgewählte Projekte) und groß auf der jeweiligen Detailseite. Die Illustrationen zeigen abstrakte Abläufe ohne Kunden- oder Live-Daten und unterstützen reduzierte Bewegung.

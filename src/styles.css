@@ -425,3 +425,421 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
 }
+
+/* Dayra motion adapted from FloDay's DayraLiveStage; CSS only. */
+.dayra-live-stage {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: min(100%, 640px);
+  aspect-ratio: 1.08;
+  border-radius: 34px;
+  background: radial-gradient(circle at 50% 45%, rgba(13, 53, 83, .42), rgba(3, 25, 43, .14) 42%, transparent 70%)
+}
+
+.dayra-live-shell.is-spotlight .dayra-live-stage {
+  background: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, .08), rgba(13, 53, 83, .16) 42%, transparent 76%)
+}
+
+.dayra-live-aura,
+.dayra-live-orbit,
+.dayra-live-mark,
+.dayra-live-ring,
+.dayra-live-center,
+.dayra-live-center span {
+  border-radius: 50%
+}
+
+.dayra-live-aura {
+  position: absolute;
+  inset: auto;
+  pointer-events: none;
+  filter: blur(18px)
+}
+
+.dayra-live-aura-one {
+  width: 74%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(34, 211, 216, .22), rgba(34, 211, 216, 0));
+  animation: dayra-drift-one 8s ease-in-out infinite
+}
+
+.dayra-live-aura-two {
+  width: 52%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(120, 104, 188, .22), rgba(120, 104, 188, 0));
+  animation: dayra-drift-two 9s ease-in-out infinite
+}
+
+.dayra-live-aura-three {
+  width: 33%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(56, 189, 248, .26), rgba(56, 189, 248, 0));
+  animation: dayra-drift-three 7s ease-in-out infinite
+}
+
+.dayra-live-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 1px solid rgba(114, 226, 230, .2)
+}
+
+.dayra-live-orbit-one {
+  width: 78%;
+  aspect-ratio: 1;
+  animation: dayra-spin 15s linear infinite
+}
+
+.dayra-live-orbit-two {
+  width: 58%;
+  aspect-ratio: 1;
+  border-color: rgba(174, 151, 255, .2);
+  animation: dayra-spin-reverse 12s linear infinite
+}
+
+.dayra-live-orbit-three {
+  width: 38%;
+  aspect-ratio: 1;
+  border-color: rgba(111, 235, 238, .28);
+  animation: dayra-spin 9s linear infinite
+}
+
+.dayra-live-mark {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, .08);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, .02)
+}
+
+.dayra-live-mark i {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #efffff 0 14%, #73e9e6 45%, #6e77d7 100%);
+  box-shadow: 0 0 18px rgba(111, 235, 238, .95)
+}
+
+.dayra-live-mark-one {
+  top: 14%;
+  left: 58%;
+  animation: dayra-mark-one 6.5s ease-in-out infinite
+}
+
+.dayra-live-mark-two {
+  right: 18%;
+  top: 42%;
+  animation: dayra-mark-two 7.5s ease-in-out infinite
+}
+
+.dayra-live-mark-three {
+  left: 20%;
+  bottom: 23%;
+  animation: dayra-mark-three 8s ease-in-out infinite
+}
+
+.dayra-live-mark-four {
+  left: 26%;
+  top: 25%;
+  animation: dayra-mark-four 7s ease-in-out infinite
+}
+
+.dayra-live-core {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 38%;
+  aspect-ratio: 1;
+  min-width: 0;
+  max-width: 310px
+}
+
+.dayra-live-ring {
+  position: absolute;
+  inset: 0
+}
+
+.dayra-live-ring.ring-outer {
+  border: 12px solid rgba(214, 252, 255, .95);
+  box-shadow: 0 0 22px rgba(117, 234, 239, .9), 0 0 62px rgba(87, 206, 234, .24), inset 0 0 28px rgba(188, 255, 255, .32);
+  animation: dayra-breathe 3.8s ease-in-out infinite
+}
+
+.dayra-live-ring.ring-middle {
+  inset: 17%;
+  border: 12px solid transparent;
+  background: conic-gradient(from 40deg, #52ddd4, #7a7ef0, #86bbff, #4fd3c8) border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: .96;
+  filter: drop-shadow(0 0 18px rgba(120, 104, 188, .32));
+  animation: dayra-spectrum-spin 8.6s linear infinite
+}
+
+.dayra-live-ring.ring-inner {
+  inset: 33%;
+  border: 10px solid rgba(21, 77, 116, .9);
+  box-shadow: inset 0 0 18px rgba(34, 195, 202, .2)
+}
+
+.dayra-live-center {
+  position: absolute;
+  inset: 42%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, #efffff 0 12%, #7ceae7 36%, #2ac3b0 70%, #5571b6 100%);
+  box-shadow: inset 0 2px 8px rgba(255, 255, 255, .75), 0 0 28px rgba(103, 234, 236, .72)
+}
+
+.dayra-live-center span {
+  display: block;
+  width: 32%;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, .38);
+  filter: blur(1px)
+}
+
+.dayra-live-chip {
+  position: absolute;
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 16px;
+  background: rgba(4, 24, 41, .66);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 34px rgba(2, 10, 18, .2)
+}
+
+.dayra-live-chip strong {
+  font-size: .8rem;
+  color: #fff;
+  letter-spacing: -.01em
+}
+
+.dayra-live-chip small {
+  font-size: .72rem;
+  color: #a8c8d4
+}
+
+.dayra-live-chip.chip-one {
+  left: 2%;
+  top: 16%;
+  animation: dayra-chip-one 7.2s ease-in-out infinite
+}
+
+.dayra-live-chip.chip-two {
+  right: 1%;
+  top: 18%;
+  animation: dayra-chip-two 6.6s ease-in-out infinite
+}
+
+.dayra-live-chip.chip-three {
+  right: 5%;
+  bottom: 16%;
+  animation: dayra-chip-three 7.6s ease-in-out infinite
+}
+
+@keyframes dayra-spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes dayra-spin-reverse {
+  to {
+    transform: rotate(-360deg)
+  }
+}
+
+@keyframes dayra-spectrum-spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes dayra-breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 22px rgba(117, 234, 239, .86), 0 0 62px rgba(87, 206, 234, .24), inset 0 0 28px rgba(188, 255, 255, .32)
+  }
+
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(117, 234, 239, 1), 0 0 75px rgba(87, 206, 234, .34), inset 0 0 34px rgba(188, 255, 255, .4)
+  }
+}
+
+@keyframes dayra-drift-one {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(14px, -10px, 0)
+  }
+}
+
+@keyframes dayra-drift-two {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(-18px, 12px, 0)
+  }
+}
+
+@keyframes dayra-drift-three {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(10px, 16px, 0)
+  }
+}
+
+@keyframes dayra-mark-one {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(8px, -14px, 0)
+  }
+}
+
+@keyframes dayra-mark-two {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(-12px, 10px, 0)
+  }
+}
+
+@keyframes dayra-mark-three {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(12px, -8px, 0)
+  }
+}
+
+@keyframes dayra-mark-four {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(-10px, -10px, 0)
+  }
+}
+
+@keyframes dayra-chip-one {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(8px, -10px, 0)
+  }
+}
+
+@keyframes dayra-chip-two {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(-10px, 10px, 0)
+  }
+}
+
+@keyframes dayra-chip-three {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  50% {
+    transform: translate3d(-8px, -12px, 0)
+  }
+}
+
+
+.dayra-showcase { padding-top: 12px; padding-bottom: 24px; }
+.dayra-showcase-panel { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 32px; padding: 46px; border: 1px solid rgba(114,226,230,.22); border-radius: 28px; overflow: hidden; color-scheme: dark; color: #f5f8fc; background: radial-gradient(ellipse at 80% 45%, rgba(34,195,202,.1), transparent 65%), #03192b; }
+.dayra-showcase-copy .eyebrow { color: #72e2e6; }
+.dayra-showcase-copy h2 { margin: 14px 0 20px; font-size: clamp(32px, 4vw, 48px); line-height: 1.12; letter-spacing: -.04em; }
+.dayra-showcase-copy > p { color: #abc0cb; margin: 0; }
+.dayra-workflow { display: grid; gap: 16px; margin: 28px 0 0; padding: 0; list-style: none; }
+.dayra-workflow li { display: flex; gap: 14px; align-items: baseline; }
+.dayra-workflow li > span { color: #72e2e6; font: 11px ui-monospace, monospace; }
+.dayra-workflow strong, .dayra-workflow small { display: block; }
+.dayra-workflow strong { font-size: 14px; }
+.dayra-workflow small { color: #abc0cb; font-size: 12px; }
+.dayra-showcase-visual { margin: 0; min-width: 0; }
+.dayra-showcase-visual figcaption { text-align: center; color: #abc0cb; font-size: 11px; letter-spacing: .04em; margin-top: 14px; }
+.dayra-preview { position: relative; display: flex; align-items: center; gap: 14px; height: 142px; padding: 12px 24px; border-radius: 18px; overflow: hidden; color: #fff; background: radial-gradient(ellipse at 25% 50%, rgba(34,195,202,.15), transparent 65%), #03192b; border: 1px solid rgba(114,226,230,.18); }
+.dayra-preview .dayra-live-stage { flex: 0 0 126px; width: 126px; aspect-ratio: 1; }
+.dayra-preview .dayra-live-core { width: 52%; }
+.dayra-preview .ring-outer { border-width: 4px; }
+.dayra-preview .ring-middle { border-width: 4px; }
+.dayra-preview .ring-inner { border-width: 3px; }
+.dayra-preview .dayra-live-mark { width: 6px; height: 6px; }
+.dayra-preview .dayra-live-mark i { width: 4px; height: 4px; }
+.dayra-preview strong { display: block; font-size: 22px; letter-spacing: -.03em; }
+.dayra-preview small { display: block; color: #abc0cb; font-size: 11px; }
+@media (max-width: 1050px) {
+  .dayra-showcase-panel { grid-template-columns: 1fr; }
+  .dayra-showcase-copy { max-width: 650px; }
+  .dayra-showcase-visual { width: min(100%, 560px); justify-self: center; }
+}
+@media (max-width: 760px) {
+  .dayra-showcase-panel { padding: 28px 18px; gap: 18px; }
+  .dayra-showcase-copy { padding-inline: 6px; }
+  .dayra-live-stage { aspect-ratio: auto; padding: 28px 12px 12px; gap: 8px; }
+  .dayra-live-core { width: 48%; margin-block: 28px 42px; }
+  .dayra-live-chip { position: relative; inset: auto !important; width: 100%; animation: none; padding: 10px 12px; }
+  .dayra-live-chip small { font-size: 11px; }
+  .dayra-live-mark { display: none; }
+  .dayra-preview { padding-inline: 12px; }
+  .dayra-preview .dayra-live-stage { padding: 0; aspect-ratio: 1; }
+  .dayra-preview .dayra-live-core { margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dayra-live-stage * { animation: none !important; }
+}

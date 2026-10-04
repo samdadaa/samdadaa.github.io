@@ -123,7 +123,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'floday-dayra',
-    title: 'Floday / Dayra',
+    title: 'FloDay / Dayra',
     kicker: 'Private Product · Workforce Management · AI',
     category: 'Private Product',
     featured: true,

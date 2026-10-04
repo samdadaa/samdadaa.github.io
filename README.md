@@ -60,3 +60,7 @@ Falls später ein echtes serverloses Formular gewünscht ist, kann ein Dienst wi
 ## Brand-Icons
 
 Die Marken-Icons werden zur Laufzeit von `cdn.simpleicons.org` geladen. Falls ein Icon oder die CDN-Verbindung nicht verfügbar ist, zeigt die Seite automatisch einen textbasierten Fallback.
+
+## FloDay / Dayra
+
+Die Projektkarten und `/projects/floday-dayra` verwenden eine CSS-Animation, adaptiert aus `DayraLiveStage.tsx` und den zugehörigen Styles der FloDay-Website. Das Markup liegt in `src/dayra.ts`, die Styles in `src/styles.css`. Die Darstellung benötigt keine zusätzlichen Pakete oder Medien und respektiert `prefers-reduced-motion`.

@@ -90,14 +90,6 @@ img { max-width: 100%; display: block; }
 }
 .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; min-width: max-content; }
-.brand-logo {
-  width: 42px; height: 42px; display: grid; place-items: center;
-  border: 1px solid var(--line-strong); border-radius: 14px;
-  background: linear-gradient(145deg, rgba(105,215,255,.14), rgba(142,240,199,.08));
-  font-weight: 850; letter-spacing: -.06em; font-size: 14px;
-  box-shadow: inset 0 0 24px rgba(105, 215, 255, .05);
-}
-.brand-logo span { color: var(--accent); }
 .brand-copy { display: flex; flex-direction: column; line-height: 1.18; }
 .brand-copy strong { font-size: 14px; letter-spacing: .01em; }
 .brand-copy small { color: var(--text-faint); font-size: 11px; margin-top: 3px; }
@@ -243,6 +235,29 @@ img { max-width: 100%; display: block; }
 .case-hero h1 { margin-top: 12px; max-width: 980px; }
 .case-lead { max-width: 880px; }
 .case-hero .tag-row { margin-top: 28px; }
+.case-hero-with-tools { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(280px, 1fr); align-items: center; gap: 48px; }
+.case-hero-copy { min-width: 0; }
+.case-hero-with-tools h1 { font-size: clamp(42px, 4.8vw, 68px); }
+.project-tool-orbit { position: relative; height: 360px; isolation: isolate; }
+.tool-orbit-ring { position: absolute; width: 300px; height: 300px; top: 30px; left: calc(50% - 150px); border: 1px solid var(--line); border-radius: 50%; background: radial-gradient(circle, rgba(105,215,255,.12), transparent 70%); }
+.tool-orbit-ring-inner { width: 220px; height: 220px; top: 70px; left: calc(50% - 110px); border-style: dashed; border-color: var(--line-strong); background: none; }
+.floating-tool { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 10px; width: 136px; animation: tool-logo-float 7s ease-in-out infinite; }
+.floating-tool-logo { width: 78px; height: 78px; display: grid; place-items: center; padding: 16px; border-radius: 22px; background: var(--icon-bg); border: 1px solid var(--line-strong); box-shadow: var(--shadow); }
+.floating-tool img { width: 100%; height: 100%; object-fit: contain; }
+.floating-tool span { color: var(--text-soft); font-size: 12px; font-weight: 650; text-align: center; }
+.floating-tool-0 { left: calc(50% - 68px); top: 132px; }
+.floating-tool-0 .floating-tool-logo { width: 104px; height: 104px; padding: 20px; border-radius: 28px; }
+.floating-tool-1 { left: calc(50% - 150px); top: 14px; animation-delay: -2s; }
+.floating-tool-2 { right: calc(50% - 186px); top: 76px; animation-delay: -4s; }
+.floating-tool-3 { left: calc(50% - 154px); bottom: 0; animation-delay: -1s; }
+@keyframes tool-logo-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+@media (max-width: 900px) {
+  .case-hero-with-tools { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .project-tool-orbit { width: min(100%, 380px); justify-self: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-tool { animation: none; }
+}
 .case-layout { display: grid; grid-template-columns: 1fr 360px; gap: 58px; padding-top: 52px; }
 .case-main { display: flex; flex-direction: column; gap: 16px; }
 .case-block { display: grid; grid-template-columns: 54px 1fr; gap: 22px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
@@ -401,7 +416,6 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 480px) {
   .nav-wrap { min-height: 68px; }
-  .brand-logo { width: 38px; height: 38px; border-radius: 12px; }
   .hero { padding-top: 55px; }
   .status-pill { font-size: 10px; }
   .hero-actions .button { width: 100%; }

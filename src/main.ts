@@ -1,6 +1,6 @@
 import { dayraPreview, dayraShowcase } from './dayra.js'
 import { projectPreview, projectShowcase } from './project-motion.js'
-import { brandTools, experience, profile, projects, skillGroups, type Project, type ProjectCategory } from './content.js'
+import { brandTools, experience, localToolLogos, profile, projects, skillGroups, type Project, type ProjectCategory } from './content.js'
 
 const appRoot = document.querySelector<HTMLDivElement>('#app') as HTMLDivElement
 if (!appRoot) throw new Error('App root not found')
@@ -40,7 +40,7 @@ function icon(name: string, size = 20): string {
 
 function brandIcon(slug: string, fallback: string, name: string): string {
   return `<span class="brand-mark" title="${escapeHtml(name)}">
-    <img loading="lazy" src="https://cdn.simpleicons.org/${encodeURIComponent(slug)}" alt="" data-brand-image />
+    <img loading="lazy" src="${localToolLogos[slug] ?? `https://cdn.simpleicons.org/${encodeURIComponent(slug)}`}" alt="" data-brand-image />
     <span class="brand-fallback">${escapeHtml(fallback)}</span>
   </span>`
 }
@@ -58,7 +58,6 @@ function layout(content: string): string {
       <header class="site-header" id="top">
         <div class="nav-wrap container-wide">
           <a class="brand" href="/" data-link aria-label="Samer Dadah – Startseite">
-            <span class="brand-logo">SD<span>.</span></span>
             <span class="brand-copy"><strong>Samer Dadah</strong><small>Software Developer</small></span>
           </a>
           <nav class="desktop-nav" aria-label="Hauptnavigation">
@@ -81,7 +80,7 @@ function layout(content: string): string {
       <main>${content}</main>
       <footer class="site-footer">
         <div class="container-wide footer-grid">
-          <div><a class="brand footer-brand" href="/" data-link><span class="brand-logo">SD<span>.</span></span><span class="brand-copy"><strong>Samer Dadah</strong><small>Softwareentwicklung · Dynamics 365 · SaaS</small></span></a></div>
+          <div><a class="brand footer-brand" href="/" data-link><span class="brand-copy"><strong>Samer Dadah</strong><small>Softwareentwicklung · Dynamics 365 · SaaS</small></span></a></div>
           <p>Technik, die Geschäftsprozesse verständlicher macht – von Business Central bis zur eigenen SaaS-Plattform.</p>
           <div class="footer-links"><a href="${profile.github}" target="_blank" rel="noreferrer">GitHub</a><a href="${profile.linkedin}" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:${profile.email}">E-Mail</a></div>
         </div>
@@ -174,16 +173,37 @@ function projectsPage(): string {
   `)
 }
 
+function projectToolOrbit(project: Project): string {
+  const usesBC = /Business Central/i.test(project.technologies.join(' ')) || project.slug === 'api-testautomatisierung'
+  if (!usesBC) return ''
+  const slugs = ['microsoft']
+  if (project.technologies.includes('Dynamics CRM')) slugs.push('dynamics365')
+  if (project.technologies.includes('C#')) slugs.push('csharp')
+  if (project.technologies.includes('.NET')) slugs.push('dotnet')
+  if (project.technologies.some((tech) => tech.includes('Azure DevOps'))) slugs.push('azuredevops')
+  return `<div class="project-tool-orbit" aria-label="Verwendete Tools und Plattformen">
+    <div class="tool-orbit-ring" aria-hidden="true"></div><div class="tool-orbit-ring tool-orbit-ring-inner" aria-hidden="true"></div>
+    ${slugs.map((slug, index) => {
+      const tool = brandTools.find((item) => item.icon === slug)!
+      return `<div class="floating-tool floating-tool-${index}"><div class="floating-tool-logo"><img src="${localToolLogos[slug]}" alt="" /></div><span>${escapeHtml(tool.name)}</span></div>`
+    }).join('')}
+  </div>`
+}
+
 function projectDetailPage(project: Project): string {
   const related = projects.filter((p) => p.slug !== project.slug && p.category === project.category).slice(0, 2)
+  const toolOrbit = projectToolOrbit(project)
   return layout(`
-    <section class="case-hero container-wide reveal">
+    <section class="case-hero container-wide reveal${toolOrbit ? ' case-hero-with-tools' : ''}">
+      <div class="case-hero-copy">
       <a class="back-link" href="/projects" data-link>← Alle Projekte</a>
       <span class="category-pill">${project.category}</span>
       <p class="project-kicker">${escapeHtml(project.kicker)}</p>
       <h1>${escapeHtml(project.title)}</h1>
       <p class="case-lead">${escapeHtml(project.summary)}</p>
       <div class="tag-row tag-row-large">${project.technologies.map((t) => `<span>${escapeHtml(t)}</span>`).join('')}</div>
+      </div>
+      ${toolOrbit}
     </section>
     ${project.slug === 'floday-dayra' ? dayraShowcase() : projectShowcase(project)}
     <section class="section container-wide case-layout">
@@ -349,8 +369,10 @@ function wireReveal(): void {
 
 function wireBrandFallbacks(): void {
   document.querySelectorAll<HTMLImageElement>('[data-brand-image]').forEach((image) => {
-    image.addEventListener('load', () => image.parentElement?.classList.add('brand-loaded'))
+    const loaded = () => image.parentElement?.classList.add('brand-loaded')
+    image.addEventListener('load', loaded)
     image.addEventListener('error', () => image.remove())
+    if (image.complete && image.naturalWidth > 0) loaded()
   })
 }
 

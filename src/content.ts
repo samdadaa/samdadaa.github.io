@@ -218,6 +218,18 @@ export const experience = [
   },
 ]
 
+export const localToolLogos: Record<string, string> = {
+  microsoft: '/assets/business-central-logo-2026.webp',
+  dynamics365: '/assets/msdynamics365crm.svg',
+  csharp: '/assets/Logo_C_sharp.svg.webp',
+  dotnet: '/assets/net-logo-2.png',
+  azuredevops: '/assets/azuredevops.webp',
+  visualstudiocode: '/assets/Visual_Studio_Code_1.35_icon.svg.webp',
+  visualstudio: '/assets/Visual_Studio_Icon_2022.svg.webp',
+  openai: '/assets/ChatGPT-Logo.svg.webp',
+  anthropic: '/assets/Claude_AI_symbol.svg.webp',
+}
+
 export const brandTools = [
   { name: 'Business Central', icon: 'microsoft', fallback: 'BC' },
   { name: 'Dynamics 365', icon: 'dynamics365', fallback: 'D365' },

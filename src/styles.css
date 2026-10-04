@@ -228,6 +228,11 @@ img { max-width: 100%; display: block; }
 .empty-state { padding: 60px 30px; text-align: center; color: var(--text-soft); border: 1px dashed var(--line); border-radius: var(--radius); }
 
 .case-hero { max-width: var(--max); }
+.project-branded-title { display: flex; align-items: center; gap: 14px; }
+.project-brand-logo { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
+.project-brand-logo-large { width: clamp(48px, 6vw, 80px); height: clamp(48px, 6vw, 80px); }
+.project-card-links { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-top: auto; }
+.project-website-link { margin-top: 24px; }
 .case-hero .category-pill { margin-top: 40px; }
 .back-link { color: var(--text-soft); font-size: 13px; }
 .back-link:hover { color: var(--text); }

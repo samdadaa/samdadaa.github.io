@@ -13,6 +13,8 @@ export type Project = {
   technologies: string[]
   highlights: string[]
   privacyNote?: string
+  website?: string
+  logo?: string
 }
 
 export type SkillGroup = {
@@ -123,6 +125,8 @@ export const projects: Project[] = [
   },
   {
     slug: 'floday-dayra',
+    website: 'https://floday.de/',
+    logo: '/assets/floday-logo.png',
     title: 'FloDay / Dayra',
     kicker: 'Private Product · Workforce Management · AI',
     category: 'Private Product',

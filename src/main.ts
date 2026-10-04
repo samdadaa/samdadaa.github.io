@@ -98,9 +98,9 @@ function projectCard(project: Project): string {
   return `<article class="project-card reveal" data-project-category="${project.category}">
     <div class="project-card-top"><span class="category-pill">${project.category}</span><span class="project-index">0${projects.indexOf(project) + 1}</span></div>
     ${project.slug === 'floday-dayra' ? dayraPreview() : projectPreview(project)}
-    <div><p class="project-kicker">${escapeHtml(project.kicker)}</p><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p></div>
+    <div><p class="project-kicker">${escapeHtml(project.kicker)}</p><h3${project.logo ? ' class="project-branded-title"' : ''}>${project.logo ? `<img class="project-brand-logo" src="${escapeHtml(project.logo)}" alt="FloDay-Logo" width="40" height="40" />` : ''}${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p></div>
     <div class="tag-row">${project.technologies.slice(0, 5).map((t) => `<span>${escapeHtml(t)}</span>`).join('')}</div>
-    <a class="text-link" href="/projects/${project.slug}" data-link>Case ansehen ${icon('arrow', 17)}</a>
+    <div class="project-card-links"><a class="text-link" href="/projects/${project.slug}" data-link>Case ansehen ${icon('arrow', 17)}</a>${project.website ? `<a class="text-link" href="${escapeHtml(project.website)}" target="_blank" rel="noopener noreferrer">floday.de ${icon('external', 16)}</a>` : ''}</div>
   </article>`
 }
 
@@ -199,9 +199,10 @@ function projectDetailPage(project: Project): string {
       <a class="back-link" href="/projects" data-link>← Alle Projekte</a>
       <span class="category-pill">${project.category}</span>
       <p class="project-kicker">${escapeHtml(project.kicker)}</p>
-      <h1>${escapeHtml(project.title)}</h1>
+      <h1${project.logo ? ' class="project-branded-title"' : ''}>${project.logo ? `<img class="project-brand-logo project-brand-logo-large" src="${escapeHtml(project.logo)}" alt="FloDay-Logo" width="80" height="80" />` : ''}${escapeHtml(project.title)}</h1>
       <p class="case-lead">${escapeHtml(project.summary)}</p>
       <div class="tag-row tag-row-large">${project.technologies.map((t) => `<span>${escapeHtml(t)}</span>`).join('')}</div>
+      ${project.website ? `<a class="button project-website-link" href="${escapeHtml(project.website)}" target="_blank" rel="noopener noreferrer">FloDay besuchen · floday.de ${icon('external', 18)}</a>` : ''}
       </div>
       ${toolOrbit}
     </section>
